@@ -10,6 +10,7 @@ No server means the file is everything. So the file format is public, documented
 - **Public domain**: the specification is released under **CC0 1.0** — anyone may build readers, writers or converters without asking us, naming us or paying us.
 - **Verifiable**: [verify_8pwd.py](tools/verify_8pwd.py) (CC0) inspects, counts and decrypts a backup with no dependencies beyond Python 3.
 - **Stable**: the version number only goes up; new sections are only ever appended; a reader ignores what it does not know. Format changes are listed on the [What's new](https://www.8pwd.com/changelog) page.
+- **Mirrored**: this page, both sample files and the verifier are mirrored at [github.com/MNV-LIMITED/8pwd-format](https://github.com/MNV-LIMITED/8pwd-format), where every change to the format has a public, dated history.
 
 The app itself is not open source; the format is. That is the promise that matters for your data.
 
