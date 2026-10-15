@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vault app="8PWD 2026" version="7" exportedAt="2026-10-14T02:00:00Z" nodes="5" formattedBlocks="0">
+  <tree>
+    <folder uuid="6FA9E40D-B482-4E8B-8686-7BFF02A28D52" name="Personal">
+      <account uuid="52822EB4-529B-4F7C-93E0-19655167FFDE" name="Example Mail" favorite="true" icon="envelope" category="email">
+        <alias>alex@example.com</alias>
+        <alias>+1 555 0100</alias>
+        <fields>
+          <field name="Username" kind="username">alex.sample@example.com</field>
+          <field name="Password" kind="password" hidden="true">Correct-Horse-Battery-Staple-42</field>
+          <field name="URL" kind="url">https://mail.example.com</field>
+          <field name="Note" kind="note">Sample record. Every value in this file is invented.</field>
+        </fields>
+      </account>
+      <account uuid="FB3CF826-A284-414D-9107-E67BCBFE8757" name="Example Shop" favorite="false">
+        <fields>
+          <field name="Username" kind="username">alex</field>
+          <field name="Password" kind="password" hidden="true">pX9!veryLongSamplePassword#2026</field>
+          <field name="URL" kind="url">https://shop.example.org</field>
+          <field name="Customer number" kind="text">00012345</field>
+        </fields>
+      </account>
+    </folder>
+    <folder uuid="4DBAB663-6065-4E16-87E7-A1A1C9628EC5" name="Work">
+      <account uuid="6507CB19-3D88-45FB-AEC7-3CC358832B40" name="Example Intranet" favorite="false">
+        <fields>
+          <field name="Username" kind="username">a.sample</field>
+          <field name="Password" kind="password" hidden="true">Sample-Intranet-Pass-7781</field>
+          <field name="URL" kind="url">https://intranet.example.net</field>
+          <field name="Work phone" kind="phone">+1 555 0100</field>
+        </fields>
+      </account>
+    </folder>
+  </tree>
+  <totps>
+    <totp uuid="D4DABDD4-4327-4025-AD3E-03C4786ECB59" note="Example Mail" linkedAccount="52822EB4-529B-4F7C-93E0-19655167FFDE">otpauth://totp/Example%20Mail:alex.sample%40example.com?secret=JBSWY3DPEHPK3PXP&amp;issuer=Example%20Mail&amp;algorithm=SHA1&amp;digits=6&amp;period=30</totp>
+  </totps>
+  <recoveryCodes>
+    <codes totp="D4DABDD4-4327-4025-AD3E-03C4786ECB59">1111-2222
+3333-4444
+5555-6666</codes>
+  </recoveryCodes>
+  <links>
+    <link account="52822EB4-529B-4F7C-93E0-19655167FFDE" kind="totp" target="D4DABDD4-4327-4025-AD3E-03C4786ECB59"/>
+    <link account="FB3CF826-A284-414D-9107-E67BCBFE8757" kind="totp" target="D4DABDD4-4327-4025-AD3E-03C4786ECB59"/>
+    <link account="FB3CF826-A284-414D-9107-E67BCBFE8757" kind="card" target="54DF3EA9-6E90-4D2F-9A8A-8B8C427919F8"/>
+  </links>
+  <wifi>
+    <network uuid="C80B9E08-5399-43EB-B394-8361B6220BDF" ssid="Sample-Home-WiFi" security="WPA2" password="sample-wifi-password-2026" note="Guest network at the sample flat"/>
+  </wifi>
+  <cards>
+    <card uuid="54DF3EA9-6E90-4D2F-9A8A-8B8C427919F8" number="4111111111111111" name="Sample Visa" cardholder="ALEX SAMPLE" expMonth="12" expYear="2028" cvv="123" issuer="Example Bank" note="Test card number from the public Visa test range"/>
+  </cards>
+  <identities>
+    <identity uuid="7D712240-9A0E-47E0-A52E-B50BBCEBA57A" title="Mx" firstName="Alex" lastName="Sample" username="alex.sample" company="Example Ltd" jobTitle="Tester" birthday="1990-01-01" created="1760000000" updated="1760313600">
+      <email label="home">alex.sample@example.com</email>
+      <phone label="mobile">+1 555 0100</phone>
+      <address label="home" aStreet1="1 Example Street" aCity="Sampletown" aRegion="EX" aPostal="00000" aCountry="Exampleland"/>
+    </identity>
+  </identities>
+</vault>
