@@ -1,13 +1,13 @@
 # .8pwd file format
 
-The open backup format of **8PWD 2026**, the offline password manager and authenticator for iPhone, iPad and Mac by MNV LIMITED: plain XML, an optional AES-256-GCM envelope, two sample files and a one-file verifier — enough to read any backup without the app.
+The open backup format of **8PWD**, the offline password manager and authenticator for iPhone, iPad and Mac by MNV LIMITED: plain XML, an optional AES-256-GCM envelope, two sample files and a one-file verifier — enough to read any backup without the app.
 
 **Canonical version:** https://www.8pwd.com/open-format. This repository mirrors it, generated from the same source, so the format can be read, cited and checked without our website.
 
 | Path | What it is |
 |---|---|
 | [SPEC.md](SPEC.md) | The full specification: the plain XML backup, the encrypted envelope, rules for readers |
-| [samples/sample-plain.8pwd](samples/sample-plain.8pwd) | A plain backup, format version 7 (8PWD 4.0). Every value in it is made up |
+| [samples/sample-plain.8pwd](samples/sample-plain.8pwd) | A plain backup, format version 8 (8PWD 5.0). Every value in it is made up |
 | [samples/sample-encrypted.8pwd](samples/sample-encrypted.8pwd) | The same vault, encrypted with the password `example` |
 | [tools/verify_8pwd.py](tools/verify_8pwd.py) | One Python 3 file that inspects, counts and decrypts a backup |
 
@@ -22,8 +22,8 @@ python3 tools/verify_8pwd.py samples/sample-encrypted.8pwd --password example
 The verifier never writes to the file, never uses the network and never prints a password. SHA-256 of the files in this commit (`shasum -a 256 -c` reads this list):
 
 ```
-46b4f1cb68ca54429af4b49ce1a244388d944fc987518ab720d619dd3e0207ed  samples/sample-plain.8pwd
-aa95c08ddc86b66c9162524853a6ba65215ed5b05e94ec072304ccfc27131c95  samples/sample-encrypted.8pwd
+86c0b58b96cb42e1dbcc7f48b67ba58455c0712361f410621d4c9f7fe17993a8  samples/sample-plain.8pwd
+f458855cd90f00dbfe93a8f6a6bb2778d9104781804a1b7edd2680a48d8f23b9  samples/sample-encrypted.8pwd
 aa12f5853eb24dc748244a2b5c217c9baa32617710ea3882cd90e8d1d692135e  tools/verify_8pwd.py
 ```
 
@@ -33,7 +33,7 @@ Everything here — specification, sample files and verifier — is dedicated to
 
 ## The app
 
-The app itself is not open source; the format is. [8PWD 2026 on the App Store](https://apps.apple.com/app/id6785896938?ct=dir-github) · [www.8pwd.com](https://www.8pwd.com)
+The app itself is not open source; the format is. [8PWD on the App Store](https://apps.apple.com/app/id6785896938?ct=dir-github) · [www.8pwd.com](https://www.8pwd.com)
 
 ## Contact
 
@@ -41,4 +41,4 @@ This repository does not take issues or pull requests. Questions or corrections:
 
 ## Other languages
 
-[繁體中文](https://www.8pwd.com/zh/open-format) · [简体中文](https://www.8pwd.com/zh-hans/open-format) · [日本語](https://www.8pwd.com/ja/open-format) · [한국어](https://www.8pwd.com/ko/open-format) · [Deutsch](https://www.8pwd.com/de/open-format) · [Français](https://www.8pwd.com/fr/open-format) · [Español](https://www.8pwd.com/es/open-format) · [Português (Brasil)](https://www.8pwd.com/pt-br/open-format) · [Italiano](https://www.8pwd.com/it/open-format) · [العربية](https://www.8pwd.com/ar/open-format) · [עברית](https://www.8pwd.com/he/open-format) · [Русский](https://www.8pwd.com/ru/open-format)
+[繁體中文](https://www.8pwd.com/zh/open-format) · [简体中文](https://www.8pwd.com/zh-hans/open-format) · [日本語](https://www.8pwd.com/ja/open-format) · [한국어](https://www.8pwd.com/ko/open-format) · [Deutsch](https://www.8pwd.com/de/open-format) · [Français](https://www.8pwd.com/fr/open-format) · [Español](https://www.8pwd.com/es/open-format) · [Português (Brasil)](https://www.8pwd.com/pt-br/open-format) · [Italiano](https://www.8pwd.com/it/open-format) · [العربية](https://www.8pwd.com/ar/open-format) · [Русский](https://www.8pwd.com/ru/open-format)

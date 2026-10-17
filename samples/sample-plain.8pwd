@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<vault app="8PWD 2026" version="7" exportedAt="2026-10-14T02:00:00Z" nodes="5" formattedBlocks="0">
+<vault app="8PWD" version="8" exportedAt="2026-10-17T02:00:00Z" nodes="5" formattedBlocks="0">
   <tree>
     <folder uuid="6FA9E40D-B482-4E8B-8686-7BFF02A28D52" name="Personal">
-      <account uuid="52822EB4-529B-4F7C-93E0-19655167FFDE" name="Example Mail" favorite="true" icon="envelope" category="email">
+      <account uuid="52822EB4-529B-4F7C-93E0-19655167FFDE" name="Example Mail" favorite="true" category="email" created="1760000000" updated="1760659200" icon="envelope">
         <alias>alex@example.com</alias>
         <alias>+1 555 0100</alias>
         <fields>
@@ -12,7 +12,7 @@
           <field name="Note" kind="note">Sample record. Every value in this file is invented.</field>
         </fields>
       </account>
-      <account uuid="FB3CF826-A284-414D-9107-E67BCBFE8757" name="Example Shop" favorite="false">
+      <account uuid="FB3CF826-A284-414D-9107-E67BCBFE8757" name="Example Shop" favorite="false" created="1760086400" updated="1760313600">
         <fields>
           <field name="Username" kind="username">alex</field>
           <field name="Password" kind="password" hidden="true">pX9!veryLongSamplePassword#2026</field>
@@ -22,7 +22,7 @@
       </account>
     </folder>
     <folder uuid="4DBAB663-6065-4E16-87E7-A1A1C9628EC5" name="Work">
-      <account uuid="6507CB19-3D88-45FB-AEC7-3CC358832B40" name="Example Intranet" favorite="false">
+      <account uuid="6507CB19-3D88-45FB-AEC7-3CC358832B40" name="Example Intranet" favorite="false" created="1760172800" updated="1760572800">
         <fields>
           <field name="Username" kind="username">a.sample</field>
           <field name="Password" kind="password" hidden="true">Sample-Intranet-Pass-7781</field>

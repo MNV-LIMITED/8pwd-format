@@ -16,9 +16,9 @@ The app itself is not open source; the format is. That is the promise that matte
 
 ## The plain backup: one UTF-8 XML file
 
-Export without a password and you get a `.8pwd` file that is plain XML. The root element is `<vault>` with the attributes `app` (the product name), `version` (currently **7**), `exportedAt` (ISO 8601 UTC), `nodes` and `formattedBlocks` (counts). Inside, in this order:
+Export without a password and you get a `.8pwd` file that is plain XML. The root element is `<vault>` with the attributes `app` (the product name), `version` (currently **8**), `exportedAt` (ISO 8601 UTC), `nodes` and `formattedBlocks` (counts). Inside, in this order:
 
-- `<tree>` — folders and accounts. `<folder uuid name>` nests freely. `<account uuid name favorite icon category>` holds `<fields>`, and each `<field name kind hidden>value</field>` is one line of the record.
+- `<tree>` — folders and accounts. `<folder uuid name>` nests freely. `<account uuid name favorite icon category created updated>` holds `<fields>`, and each `<field name kind hidden>value</field>` is one line of the record. `created` and `updated` *(5.0)* are optional: when the record was made and last edited, in Unix seconds.
 - The **meaning** of a field is its `kind`: `username`, `password`, `url`, `email`, `phone`, `note` or `text` (free custom field). `name` is only the label the user sees — it is localized (“Password”, “密碼”, “Passwort”) and should not be used to decide what a field is. `hidden="true"` marks a field the app masks by default.
 - `<formattedBlocks>` — reusable text blocks: `<formattedBlock uuid name recordSeparator>` with a `<template>` and `<accountRefs><ref uuid/></accountRefs>`.
 - `<totps>` — two-factor secrets as standard `<totp uuid note linkedAccount>otpauth://…</totp>` URIs; `linkedAccount` is the uuid of the first account they belong to (kept for older readers — the full many-to-many set is in `<links>`, see below). Any authenticator can import the URI.
@@ -32,6 +32,8 @@ Export without a password and you get a `.8pwd` file that is plain XML. The root
 - Housekeeping sections the app uses for itself: `<preferences>` (home shortcuts and, from 4.0, the Me › My Shortcuts grid as `<quickAccess>` / `<quickAccessHidden>`), `<usage>`, `<siteNotes>`, `<checkups>`. A reader that only wants passwords can skip them.
 
 Rules for readers: unknown elements and attributes are ignored; missing optional sections mean “none”; `uuid` values are stable across exports, so the same account keeps the same id; dates in `created` / `updated` / `at` are Unix seconds.
+
+Merging two copies *(5.0)*: when a file holds an account whose `uuid` the app already has, **Smart merge** keeps the copy with the later `updated` time and files a replaced password into that account's history; an account without `updated` (exported before 5.0) is kept as it is on the device. A merge never deletes anything. Other readers are welcome to follow the same rule.
 
 ## The encrypted backup: a small envelope around the same XML
 
@@ -48,7 +50,7 @@ There is no proprietary container, no key escrow and no secret: with the passwor
 
 ## Sample files
 
-Both samples hold the same invented vault — two folders, three accounts (one with an alias), one two-factor code with recovery codes, one Wi-Fi network, one card and one identity, plus the 4.0 `<links>` section tying the code and the card to their accounts. **Every value in them is made up**; nothing belongs to a real person or site.
+Both samples hold the same invented vault in format 8 — two folders, three accounts (one with an alias, each with `created` / `updated` times), one two-factor code with recovery codes, one Wi-Fi network, one card and one identity, plus the `<links>` section tying the code and the card to their accounts. **Every value in them is made up**; nothing belongs to a real person or site.
 
 - [sample-plain.8pwd](samples/sample-plain.8pwd) — the plain XML, 3 KB. Open it in any text editor.
 - [sample-encrypted.8pwd](samples/sample-encrypted.8pwd) — the same vault sealed with the password `example`.
