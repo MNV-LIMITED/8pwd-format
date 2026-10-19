@@ -1,5 +1,7 @@
 # .8pwd file format
 
+**English** · [繁體中文](translations/zh-HK/README.md) · [简体中文](translations/zh-Hans/README.md) · [日本語](translations/ja/README.md) · [한국어](translations/ko/README.md) · [Deutsch](translations/de/README.md) · [Français](translations/fr/README.md) · [Español](translations/es/README.md) · [Português (Brasil)](translations/pt-BR/README.md) · [Italiano](translations/it/README.md) · [العربية](translations/ar/README.md) · [Русский](translations/ru/README.md)
+
 The open backup format of **8PWD**, the offline password manager and authenticator for iPhone, iPad and Mac by MNV LIMITED: plain XML, an optional AES-256-GCM envelope, two sample files and a one-file verifier — enough to read any backup without the app.
 
 **Canonical version:** https://www.8pwd.com/open-format. This repository mirrors it, generated from the same source, so the format can be read, cited and checked without our website.
@@ -33,12 +35,8 @@ Everything here — specification, sample files and verifier — is dedicated to
 
 ## The app
 
-The app itself is not open source; the format is. [8PWD on the App Store](https://apps.apple.com/app/id6785896938?ct=dir-github) · [www.8pwd.com](https://www.8pwd.com)
+The app itself is not open source; the format is. [8PWD on the App Store](https://apps.apple.com/app/id6785896938?ct=dir-github) · [www.8pwd.com](https://www.8pwd.com/)
 
 ## Contact
 
 This repository does not take issues or pull requests. Questions or corrections: support@8pwd.com, with *Format* in the subject.
-
-## Other languages
-
-[繁體中文](https://www.8pwd.com/zh/open-format) · [简体中文](https://www.8pwd.com/zh-hans/open-format) · [日本語](https://www.8pwd.com/ja/open-format) · [한국어](https://www.8pwd.com/ko/open-format) · [Deutsch](https://www.8pwd.com/de/open-format) · [Français](https://www.8pwd.com/fr/open-format) · [Español](https://www.8pwd.com/es/open-format) · [Português (Brasil)](https://www.8pwd.com/pt-br/open-format) · [Italiano](https://www.8pwd.com/it/open-format) · [العربية](https://www.8pwd.com/ar/open-format) · [Русский](https://www.8pwd.com/ru/open-format)

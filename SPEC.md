@@ -1,6 +1,8 @@
 # The .8pwd file format
 
-> Mirror of [www.8pwd.com/open-format](https://www.8pwd.com/open-format), generated from the same source. The website is the canonical version and is also available in 12 other languages (links in the [README](README.md)).
+**English** · [繁體中文](translations/zh-HK/SPEC.md) · [简体中文](translations/zh-Hans/SPEC.md) · [日本語](translations/ja/SPEC.md) · [한국어](translations/ko/SPEC.md) · [Deutsch](translations/de/SPEC.md) · [Français](translations/fr/SPEC.md) · [Español](translations/es/SPEC.md) · [Português (Brasil)](translations/pt-BR/SPEC.md) · [Italiano](translations/it/SPEC.md) · [العربية](translations/ar/SPEC.md) · [Русский](translations/ru/SPEC.md)
+
+> Mirror of [www.8pwd.com/open-format](https://www.8pwd.com/open-format), generated from the same source. The website is the canonical version; the language line above links the translations.
 
 No server means the file is everything. So the file format is public, documented here in full, released into the public domain, and comes with sample files and a verifier you can run without 8PWD. If we disappeared tomorrow, your passwords would still be a readable file.
 
